@@ -1,0 +1,26 @@
+Version: '4.0'
+Type: NeuralNetwork
+Engine: torch
+Name: Cones
+ModelFile: cones.pt
+ForceCPU: false
+Verbose: false
+MaxBatchSize: 4
+PredictionOutput: Image
+
+PreProcessing:
+  - ConvertToGray
+  - MakeFloat: { }
+  - Resample:
+      resolution: 1.0 1.0 1.0
+PostProcessing:
+  - ArgMax: { }
+Sampling:
+  - DimensionDivisor: 32
+  - MaxSizeSubdivision: -1
+  - PixelsOverlap: 16
+  - RecombineWeighted: true
+  - MirrorPadding: false
+  - ExtendImage: false
+  - Margin: 0
+  - SkipUnpadding: false
