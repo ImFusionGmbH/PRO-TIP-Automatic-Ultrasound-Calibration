@@ -2,6 +2,8 @@
 This repository contains a reference open source implementation of the paper [PRO-TIP: Phantom for RObust automatic
 ultrasound calibration by TIP detection (Ronchetti et al. 2022)](https://arxiv.org/abs/2206.05962) as an ImFusionSuite plugin.
 
+**Requires ImFusion SDK version 2.41 or newer**
+
 **NOTE** The algorithm is also part of the ImFusion SDK.
 
 ![Photograph of the phantom](images/phantom.jpg)
